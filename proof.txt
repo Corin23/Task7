@@ -1,0 +1,37 @@
+Teste:
+
+100 numbers:
+corin@corin:~/Desktop/Tasks/Task7$ time python3 num.py 
+
+real	0m0.017s
+user	0m0.016s
+sys	0m0.000s
+
+
+1000 numbers:
+corin@corin:~/Desktop/Tasks/Task7$ time python3 num.py 
+
+real	0m0.021s
+user	0m0.020s
+sys	0m0.000s
+
+10000 numbers:
+corin@corin:~/Desktop/Tasks/Task7$ time python3 num.py 
+
+real	0m0.072s
+user	0m0.037s
+sys	0m0.004s
+
+3 secvente de "123" ramase, pattern: *321*23
+
+100000 numbers:
+corin@corin:~/Desktop/Tasks/Task7$ time python3 num.py 
+
+real	0m0.110s
+user	0m0.104s
+sys	0m0.004s
+
+
+
+
+
