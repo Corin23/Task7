@@ -13,7 +13,6 @@ class ProcessNumbers:
             #for numbers in fin:
             #   newnumber.append(numbers.replace(what, wth))
             newnumber = [numbers.replace(rep, wth) for numbers in fin]
-
         return newnumber
 
     def convertAndSort(self, array):
