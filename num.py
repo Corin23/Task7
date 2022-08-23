@@ -30,7 +30,7 @@ class ProcessNumbers:
 res = []
 myProcess = ProcessNumbers("in.txt", "out.txt",res)
 
-arr1 = myProcess.readFileReplace()
+myProcess.readFileReplace()
 myProcess.convertAndSort()
 
 myProcess.writeInFile()
