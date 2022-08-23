@@ -1,34 +1,41 @@
 class ProcessNumbers:
-    
-    def __init__(self,filein,fileout):
+    rep = "123"
+    wth = "321"
+
+
+    def __init__(self,filein,fileout,arr: list[str]):
         self.filein = filein
+
         self.fileout = fileout
 
+        self.arr = arr
+
+
     def readFileReplace(self):
-        newnumber = []
-        rep = "123"
-        wth = "321"
 
         with open(self.filein , "r") as fin:
-            #for numbers in fin:
-            #   newnumber.append(numbers.replace(what, wth))
-            newnumber = [numbers.replace(rep, wth) for numbers in fin]
+            self.arr = [numbers.replace(ProcessNumbers.rep, ProcessNumbers.wth) for numbers in fin]
+ 
 
-        return newnumber
+    def convertAndSort(self):
 
-    def convertAndSort(self, array):
-        for i in range(0, len(array)):
-            array[i] = int(array[i])
+        for i in range(0, len(self.arr)):
+            self.arr[i] = int(self.arr[i])
         
-        array.sort()
-        return array
+        self.arr.sort()
 
-    def writeInFile(self, contents):
+
+    def writeInFile(self):
+        
         with open(self.fileout, "w") as fout:
-            for items in contents:
+            for items in self.arr:
                 fout.write("%i\n" % items)
 
-myProcess = ProcessNumbers("in.txt", "out.txt")
-result = myProcess.readFileReplace()
-myProcess.convertAndSort(result)
-myProcess.writeInFile(result)
+
+res = []
+myProcess = ProcessNumbers("in.txt", "out.txt",res)
+
+arr1 = myProcess.readFileReplace()
+myProcess.convertAndSort()
+
+myProcess.writeInFile()
