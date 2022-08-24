@@ -1,6 +1,3 @@
-import resource
-
-
 class ProcessNumbers:
     rep = "123"
     wth = "321"
